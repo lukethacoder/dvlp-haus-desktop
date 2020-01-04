@@ -1,5 +1,10 @@
 import * as React from 'react'
+import { ModuleSearch } from '../module-search'
 
-const NavigationSide = () => <div>side navigation goes here</div>
+const NavigationSide = () => (
+  <div>
+    <ModuleSearch />
+  </div>
+)
 
 export { NavigationSide }
