@@ -1,3 +1,14 @@
-$brand-primary: #d9b262;
+// @use "sass:color";
+
+$brand-primary: hsl(353, 95%, 57%);
 $brand-secondary: #141414;
 $brand-tertiary: #2c2c2c;
+
+$black-base: hsl(225, 22%, 11%);
+
+$black-20: adjust-color($black-base, $lightness: 20%);
+$black-40: adjust-color($black-base, $lightness: 40%);
+$black-60: adjust-color($black-base, $lightness: 60%);
+// $black-40: color.scale($black-base, $lightness: 40%);
+// $black-60: color.scale($black-base, $lightness: 60%);
+// $black-80: color.scale($black-base, $lightness: 80%);

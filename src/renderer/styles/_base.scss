@@ -1,4 +1,10 @@
+html {
+  height: 100%;
+  overflow: hidden;
+}
 body {
+  height: 100%;
+  overflow: hidden;
   background-color: #ffffff;
   color: $brand-primary;
   margin: 0;
@@ -9,6 +15,11 @@ body {
     background-color: $brand-secondary;
     color: $brand-primary;
   }
+}
+
+#app {
+  height: 100%;
+  overflow: hidden;
 }
 
 a {
