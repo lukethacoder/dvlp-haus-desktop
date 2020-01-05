@@ -4,12 +4,49 @@ $brand-primary: hsl(353, 95%, 57%);
 $brand-secondary: #141414;
 $brand-tertiary: #2c2c2c;
 
-$white-base: hsl(360, 100%, 98%);
-$black-base: hsl(225, 22%, 11%);
+$brand-white: hsl(360, 100%, 98%);
+$brand-black: hsl(225, 22%, 11%);
 
-$black-20: adjust-color($black-base, $lightness: 20%);
-$black-40: adjust-color($black-base, $lightness: 40%);
-$black-60: adjust-color($black-base, $lightness: 60%);
-// $black-40: color.scale($black-base, $lightness: 40%);
-// $black-60: color.scale($black-base, $lightness: 60%);
-// $black-80: color.scale($black-base, $lightness: 80%);
+$black-20: adjust-color($brand-black, $lightness: 20%);
+$black-40: adjust-color($brand-black, $lightness: 40%);
+$black-60: adjust-color($brand-black, $lightness: 60%);
+// $black-40: color.scale($brand-black, $lightness: 40%);
+// $black-60: color.scale($brand-black, $lightness: 60%);
+// $black-80: color.scale($brand-black, $lightness: 80%);
+
+// Color map //
+$theme-palette: (
+  dark: (
+    brand: $brand-primary,
+    color: $brand-white,
+    background: $brand-black,
+    font: $brand-white,
+    accent: $brand-primary,
+    accent-font: $brand-primary,
+    side-nav-bg: $brand-black,
+  ),
+  light: (
+    brand: $brand-primary,
+    color: $brand-black,
+    background: $brand-white,
+    font: $brand-secondary,
+    accent: $brand-secondary,
+    accent-font: $brand-primary,
+    side-nav-bg: $brand-white,
+  ),
+);
+
+:root {
+  // Loop over each theme-palette
+  @each $color, $color-swatch in $theme-palette {
+    .#{$color} {
+      // Loop over each field
+      @each $field, $color-swatch in map-get($theme-palette, #{$color}) {
+        --theme-#{$field}: #{$color-swatch};
+      }
+    }
+  }
+}
+
+.light {
+}

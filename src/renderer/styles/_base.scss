@@ -5,16 +5,12 @@ html {
 body {
   height: 100%;
   overflow: hidden;
-  background-color: #ffffff;
+  background-color: $brand-black;
   color: $brand-primary;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
-  &.dark {
-    background-color: $brand-secondary;
-    color: $brand-primary;
-  }
 }
 
 #app {
@@ -24,34 +20,8 @@ body {
 
 a {
   text-decoration: none;
-  color: $brand-secondary;
 }
 
-.page__content {
-  padding: 0 24px;
-  color: $brand-secondary;
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: $brand-primary;
-  }
-  h4 {
-    font-weight: 700;
-  }
-  .highlight {
-    background-color: #f6f8fa;
-    pre {
-      padding: 16px;
-      overflow: auto;
-      font-size: 85%;
-      line-height: 1.45;
-      background-color: #f6f8fa;
-      border-radius: 3px;
-      color: $brand-secondary;
-    }
-  }
-}
 .center {
   text-align: center;
 }

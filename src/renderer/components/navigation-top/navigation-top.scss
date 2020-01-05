@@ -32,12 +32,12 @@
       height: 28px;
       width: 28px;
       border-radius: 240px;
-      background-color: $brand-primary;
+      background-color: var(--theme-brand);
       display: flex;
       align-items: center;
       justify-content: center;
       p {
-        color: $white-base;
+        color: $brand-white;
         margin: 0;
       }
     }
