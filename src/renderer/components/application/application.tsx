@@ -16,7 +16,7 @@ const Application = () => {
       >
         <NavigationSide />
       </Resizable>
-      <section>
+      <section className='application__section'>
         <NavigationTop />
         <main>{/* child routes go here  */}</main>
       </section>
