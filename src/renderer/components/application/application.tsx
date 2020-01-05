@@ -15,12 +15,19 @@ const Application = () => {
           setSideNavWidth(sideNavWidth + d.width)
         }}
       >
-        <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>toggle theme</button>
+        <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>
+          toggle theme
+        </button>
         <NavigationSide />
       </Resizable>
       <section className='application__section'>
         <NavigationTop />
-        <main>{/* child routes go here  */}</main>
+        <main>
+          <div className='b-0'>black-0</div>
+          <div className='b-13'>black-13</div>
+          <div className='b-20'>black-20</div>
+          {/* child routes go here  */}
+        </main>
       </section>
     </div>
   )
