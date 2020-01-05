@@ -176,6 +176,7 @@
     "core-js": "3",
     "electron-squirrel-startup": "^1.0.0",
     "file-loader": "^4.2.0",
+    "re-resizable": "^6.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   }

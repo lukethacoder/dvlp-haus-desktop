@@ -2,7 +2,7 @@ import * as React from 'react'
 import { ModuleSearch } from '../module-search'
 
 const NavigationSide = () => (
-  <div>
+  <div className='navigation__side'>
     <ModuleSearch />
   </div>
 )
