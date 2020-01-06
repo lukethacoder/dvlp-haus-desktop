@@ -23,9 +23,11 @@ const Application = () => {
       <section className='application__section'>
         <NavigationTop />
         <main>
-          <div className='b-0'>black-0</div>
-          <div className='b-13'>black-13</div>
-          <div className='b-20'>black-20</div>
+          <div className='b-10'>b-10</div>
+          <div className='b-20'>b-20</div>
+          <div className='b-30'>b-30</div>
+          <div className='b-40'>b-40</div>
+          <div className='b-50'>b-50</div>
           {/* child routes go here  */}
         </main>
       </section>

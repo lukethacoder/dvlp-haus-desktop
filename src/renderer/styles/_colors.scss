@@ -12,10 +12,12 @@ $brand-black: hsl(225, 22%, 11%);
 // $brand-black: adjust-color($base-black, $lightness: 13%); // #151821 - rgb(21, 24, 33)
 $brand-black-hex: #151821; // #151821
 
-$b-13: hsl(225, 19%, 13%);
-$b-13: hsl(230, 20%, 18%);
-$b-20: adjust-color($brand-black, $lightness: 20%);
-$b-60: adjust-color($brand-black, $lightness: 60%);
+$b-10: hsl(225, 22%, 11%);
+$b-20: hsl(225, 19%, 12%);
+$b-30: hsl(230, 18%, 15%);
+$b-40: hsl(230, 18%, 17%);
+$b-50: hsl(230, 18%, 19%);
+// $b-60: adjust-color($brand-black, $lightness: 60%);
 // $black-40: color.scale($brand-black, $lightness: 40%);
 // $black-60: color.scale($brand-black, $lightness: 60%);
 // $black-80: color.scale($brand-black, $lightness: 80%);
@@ -23,11 +25,20 @@ $b-60: adjust-color($brand-black, $lightness: 60%);
 .b-0 {
   background-color: $brand-black;
 }
-.b-13 {
-  background-color: $b-13;
+.b-10 {
+  background-color: $b-10;
 }
 .b-20 {
   background-color: $b-20;
+}
+.b-30 {
+  background-color: $b-30;
+}
+.b-40 {
+  background-color: $b-40;
+}
+.b-50 {
+  background-color: $b-50;
 }
 
 // Color map //
@@ -39,8 +50,8 @@ $theme-palette: (
     font: $brand-white,
     accent: $brand-primary,
     accent-font: $brand-primary,
-    side-nav-bg: $b-13,
-    top-nav-bg: $b-13,
+    side-nav-bg: $b-10,
+    top-nav-bg: $b-10,
   ),
   light: (
     brand: $brand-primary,
