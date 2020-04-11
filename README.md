@@ -2,6 +2,10 @@
 
 > design refresh of dvlp.haus + desktop rebuild
 
+### Early Stages Draft Redesign
+
+![draft-redesign-v1](./docs/designs-draft-v1.jpg)
+
 ### Tech stack
 
 - [Electron](https://electronjs.org/)
