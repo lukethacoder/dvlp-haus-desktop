@@ -1,1 +1,1 @@
-export { API_modules } from './modules'
+export { apiModules } from './modules'

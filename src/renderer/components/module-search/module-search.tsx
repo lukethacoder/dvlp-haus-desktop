@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { API_modules } from '../../api'
+import { apiModules } from '../../api'
 
 const ModuleSearch = () => {
   const [search, setSearch] = useState('')
@@ -11,7 +11,7 @@ const ModuleSearch = () => {
   const fetchModules = async () => {
     console.log('fetchModules()')
     try {
-      const modules_ref: any = await API_modules('')
+      const modules_ref: any = await apiModules('')
 
       setModules(modules_ref.map((item: any) => item))
       setLoading(false)
@@ -28,7 +28,7 @@ const ModuleSearch = () => {
     setSearch(e.target.value)
 
     try {
-      const modules_ref: any = await API_modules(e.target.value)
+      const modules_ref: any = await apiModules(e.target.value)
       setModules(modules_ref.map((item: any) => item))
       setLoading(false)
     } catch (e) {
