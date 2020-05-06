@@ -1,0 +1,75 @@
+.b-0 {
+  background-color: #161922;
+}
+
+.b-10 {
+  background-color: #161922;
+}
+
+.b-20 {
+  background-color: #191c24;
+}
+
+.b-30 {
+  background-color: #1f222d;
+}
+
+.b-40 {
+  background-color: #242633;
+}
+
+.b-50 {
+  background-color: #282b39;
+}
+
+:root .dark {
+  --theme-brand: #fa2941;
+  --theme-color: #ffffff;
+  --theme-background: #161922;
+  --theme-font: #ffffff;
+  --theme-accent: #fa2941;
+  --theme-accent-font: #fa2941;
+  --theme-side-nav-bg: #161922;
+  --theme-top-nav-bg: #161922;
+}
+:root .light {
+  --theme-brand: #fa2941;
+  --theme-color: #161922;
+  --theme-background: #ffffff;
+  --theme-font: #141414;
+  --theme-accent: #141414;
+  --theme-accent-font: #fa2941;
+  --theme-side-nav-bg: #fff8f5;
+  --theme-top-nav-bg: #fff8f5;
+}
+
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow: hidden;
+  background-color: #161922;
+  color: #fa2941;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+
+#app {
+  height: 100%;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+/*# sourceMappingURL=/src.fc45d0fd.css.map */

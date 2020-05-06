@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component-application renders correctly 1`] = `
+<div>
+  <div>
+    <h1>
+      Hello World from Electron!
+    </h1>
+    <a
+      href="https://github.com/lukethacoder/electron-typescript-react-hooks"
+    >
+      repo
+    </a>
+  </div>
+</div>
+`;

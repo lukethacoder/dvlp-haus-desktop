@@ -1,0 +1,10 @@
+.application__container {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--theme-background);
+  color: var(--theme-color);
+}
+.application__section {
+  flex: 1;
+}
