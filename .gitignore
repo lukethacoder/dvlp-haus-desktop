@@ -1,6 +1,8 @@
 node_modules/
 dist/
+build/
 out/
 .webpack/
 release/
 .env
+.cache
