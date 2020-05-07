@@ -2259,9 +2259,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30001043:
-  version "1.0.30001052"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001052.tgz#33a5ddd13783cfe2c8a6a846ab983387d4edff75"
-  integrity sha512-b2/oWZwkpWzEB1+Azr2Z4FcpdDkH+9R4dn+bkwk/6eH9mRSrnZjhA6v32+zsV+TSqC0pp2Rxush2yUVTJ0dJTQ==
+  version "1.0.30001053"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001053.tgz#b7ae027567ce2665b965b0437e4512b296ccd20d"
+  integrity sha512-HtV4wwIZl6GA4Oznse8aR274XUOYGZnQLcf/P8vHgmlfqSNelwD+id8CyHOceqLqt9yfKmo7DUZTh1EuS9pukg==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2347,9 +2347,9 @@ chromium-pickle-js@^0.2.0:
   integrity sha1-BKEGZywYsIWrd02YPfo+oTjyIgU=
 
 ci-env@^1.4.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.13.0.tgz#19d88a93c65443e785250347982305dc2975fd8e"
-  integrity sha512-TkqQVqIp5Pbr471ZxxsixQAOXJ2V8UKD8FDqDc4d4X/zvLgezRww8Spjufvjc9qQJCGVeJjiy4tm3LzxcynEfA==
+  version "1.14.0"
+  resolved "https://registry.yarnpkg.com/ci-env/-/ci-env-1.14.0.tgz#917867ed4d3580a1ea2776b235a70bcb9b8e0791"
+  integrity sha512-rSoyr8Fvlr3BBlCrIFmeTiIL1ORU3QRJamirxCOot0DpRO7i8ityqoKfoOXa1NVrrSNCdaPmt9al/2ebD2v3cg==
 
 ci-info@^1.5.0:
   version "1.6.0"
@@ -2882,9 +2882,9 @@ data-urls@^1.1.0:
     whatwg-url "^7.0.0"
 
 date-fns@^2.0.1:
-  version "2.12.0"
-  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.12.0.tgz#01754c8a2f3368fc1119cf4625c3dad8c1845ee6"
-  integrity sha512-qJgn99xxKnFgB1qL4jpxU7Q2t0LOn1p8KMIveef3UZD7kqjT3tpFNNdXJelEHhE+rUgffriXriw/sOSU+cS1Hw==
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.13.0.tgz#d7b8a0a2d392e8d88a8024d0a46b980bbfdbd708"
+  integrity sha512-xm0c61mevGF7f0XpCGtDTGpzEFC/1fpLXHbmFpxZZQJuvByIK2ozm6cSYuU+nxFYOPh2EuCfzUwlTEFwKG+h5w==
 
 deasync@^0.1.14:
   version "0.1.20"
@@ -3248,10 +3248,17 @@ electron-publish@20.38.5:
     lazy-val "^1.0.3"
     mime "^2.4.0"
 
+electron-squirrel-startup@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/electron-squirrel-startup/-/electron-squirrel-startup-1.0.0.tgz#19b4e55933fa0ef8f556784b9c660f772546a0b8"
+  integrity sha1-GbTlWTP6Dvj1VnhLnGYPdyVGoLg=
+  dependencies:
+    debug "^2.2.0"
+
 electron-to-chromium@^1.3.413, electron-to-chromium@^1.3.47:
-  version "1.3.428"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.428.tgz#9afec8766dbe3cab825817f77e3ed0e63467b71a"
-  integrity sha512-u3+5jEfgLKq/hGO96YfAoOAM1tgFnRDTCD5mLuev44tttcXix+INtVegAkmGzUcfDsnzkPt51XXurXZLLwXt0w==
+  version "1.3.430"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.430.tgz#33914f7c2db771bdcf30977bd4fd6258ee8a2f37"
+  integrity sha512-HMDYkANGhx6vfbqpOf/hc6hWEmiOipOHGDeRDeUb3HLD3XIWpvKQxFgWf0tgHcr3aNv6I/8VPecplqmQsXoZSw==
 
 electron@4.0.1:
   version "4.0.1"

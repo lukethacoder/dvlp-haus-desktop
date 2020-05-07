@@ -13,7 +13,7 @@
     "url": "https://github.com/lukethacoder/dvlp-haus-desktop/issues"
   },
   "homepage": "https://github.com/lukethacoder/dvlp-haus-desktop",
-  "main": ".webpack/main",
+  "main": "electron.js",
   "scripts": {
     "dev": "yarn start",
     "react-start": "parcel -p 3000 index.html --out-dir build",
@@ -49,6 +49,7 @@
   "dependencies": {
     "electron-download": "^4.1.1",
     "electron-is-dev": "1.0.1",
+    "electron-squirrel-startup": "^1.0.0",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
@@ -69,49 +70,35 @@
       "\\.(s?css|sass)$": "<rootDir>/__mocks__/style.js"
     }
   },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "dvlp-haus-desktop"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-deb",
-          "config": {}
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        }
-      ],
-      "plugins": [
-        [
-          "@electron-forge/plugin-webpack",
-          {
-            "mainConfig": "./webpack.main.config.js",
-            "renderer": {
-              "config": "./webpack.renderer.config.js",
-              "entryPoints": [
-                {
-                  "html": "./public/index.html",
-                  "js": "./src/renderer/renderer.tsx",
-                  "name": "main_window"
-                }
-              ]
-            }
-          }
-        ]
-      ]
+  "build": {
+    "appId": "com.luke",
+    "files": [
+      "src/electron.js",
+      "src/assets/*",
+      "build/**/*"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "src/assets/logo.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "src/assets/logo.png"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "src/assets/logo.png",
+      "category": "Development"
     }
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "./build/src.*.js",
+      "maxSize": "250 kB"
+    },
+    {
+      "path": "./build/src.*.css",
+      "maxSize": "100 kB"
+    }
+  ]
 }

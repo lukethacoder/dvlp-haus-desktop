@@ -1,35 +1,31 @@
-// import path from 'path'
-import { app, BrowserWindow } from 'electron'
-import isDev from 'electron-is-dev'
-// import * as path from 'path'
-// import * as url from 'url'
+const electron = require('electron')
+const app = electron.app
+const BrowserWindow = electron.BrowserWindow
 
-declare global {
-  const MAIN_WINDOW_WEBPACK_ENTRY: string
-}
-
-// Handle creating/removing shortcuts on Windows when installing/uninstalling.
-if (require('electron-squirrel-startup')) {
-  // eslint-disable-line global-require
-  app.quit()
-}
+const path = require('path')
+const installer = require('electron-devtools-installer')
+const isDev = require('electron-is-dev')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let mainWindow: null | BrowserWindow
+let mainWindow
 
-const installExtensions = async () => {
-  const installer = import('electron-devtools-installer')
+// Handle creating/removing shortcuts on Windows when installing/uninstalling.
+// if (require('electron-squirrel-startup')) {
+//   // eslint-disable-line global-require
+//   app.quit()
+// }
+
+async function installExtensions() {
   const forceDownload = !!process.env.UPGRADE_EXTENSIONS
   const extensions = ['REACT_DEVELOPER_TOOLS']
-  //   const extensions = ['REACT_DEVELOPER_TOOLS', 'REDUX_DEVTOOLS']
 
   return Promise.all(
     extensions.map((name) => installer.default(installer[name], forceDownload))
   ).catch(console.log)
 }
 
-const createWindow = async () => {
+async function createWindow() {
   if (process.env.NODE_ENV !== 'production') {
     await installExtensions()
   }
@@ -47,8 +43,7 @@ const createWindow = async () => {
 
   // and load the index.html of the app.
   mainWindow.loadURL(
-    // isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`
-    'http://localhost:3000'
+    isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`
   )
 
   // if (process.env.NODE_ENV !== 'production') {

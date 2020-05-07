@@ -4,3 +4,4 @@ out/
 .webpack/
 release/
 .env
+.cache
