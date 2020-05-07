@@ -1,0 +1,12 @@
+[package]
+name = "app"
+version = "0.1.0"
+description = "A Tauri App"
+license = ""
+repository = ""
+edition = "2018"
+
+[dependencies]
+
+[lib]
+crate-type = ["cdylib"]
