@@ -28,6 +28,7 @@
     "test": "jest '(\\/test\\/(?!e2e/)).*'"
   },
   "devDependencies": {
+    "@types/react": "^16.9.35",
     "babel-core": "6.26.3",
     "babel-plugin-transform-class-properties": "latest",
     "babel-plugin-transform-object-rest-spread": "6.26.0",
@@ -50,6 +51,7 @@
     "electron-download": "^4.1.1",
     "electron-is-dev": "1.0.1",
     "electron-squirrel-startup": "^1.0.0",
+    "re-resizable": "^6.4.0",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
