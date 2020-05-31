@@ -1,8 +1,8 @@
 import { FC } from 'react'
 
-export type ModuleStatus = 'active' | 'draft' | 'hidden'
+declare type ModuleStatus = 'active' | 'draft' | 'hidden'
 
-export declare interface IModuleConfig {
+declare interface IModuleConfig {
   component: FC
   name: string
   slug: string
@@ -11,5 +11,16 @@ export declare interface IModuleConfig {
   rust: boolean
   icon?: {
     svg?: string
+    component?: FC
+  }
+}
+
+declare interface IReactRouterLink {
+  slug: string
+  name: string
+  exact?: boolean
+  icon?: {
+    svg?: string
+    component?: FC
   }
 }

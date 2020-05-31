@@ -11,28 +11,10 @@ module.exports = {
       xl: '1280px',
     },
     colors: {
-      grey: {
-        100: '#FEFEFE',
-        200: '#F5F7F9', // main light grey
-        // 300: '#e2e8f0',
-        // 400: '#cbd5e0',
-        500: '#969696',
-        // 600: '#8692A6',
-        700: '#404040',
-        // 800: '#384559',
-        900: '#222222',
-      },
-      red: {
-        // 100: '#fff5f5',
-        // 200: '#fed7d7',
-        // 300: '#feb2b2',
-        // 400: '#fc8181',
-        500: '#FF3A3F', // #FF3A3F
-        // 600: '#e73655',
-        700: '#ED1C24', // #ED1C24
-        // 800: '#BD003D',
-        900: '#742a2a',
-      },
+      primary: 'var(--theme-primary)',
+      secondary: 'var(--theme-secondary)',
+      tertiary: 'var(--theme-tertiary)',
+      background: 'var(--theme-background)',
 
       transparent: 'transparent',
       todo: '#117869',
@@ -99,14 +81,10 @@ module.exports = {
       '8': '8px',
     },
     boxShadow: {
-      default:
-        '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-      md:
-        '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-      lg:
-        '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-      xl:
-        '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
       '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       outline: '0 0 0 3px rgba(66, 153, 225, 0.5)',
@@ -155,7 +133,6 @@ module.exports = {
     },
     fontFamily: {
       sans: [
-        '"Barlow Condensed"',
         'Roboto',
         '"Helvetica Neue"',
         '-apple-system',
@@ -185,14 +162,7 @@ module.exports = {
         '"Noto Color Emoji"',
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: [
-        'Menlo',
-        'Monaco',
-        'Consolas',
-        '"Liberation Mono"',
-        '"Courier New"',
-        'monospace',
-      ],
+      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
       xs: '0.875rem', // 14px

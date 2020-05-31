@@ -1,0 +1,17 @@
+.app_menu {
+  padding: 20px;
+  .menu_btn {
+    width: 24px;
+    height: 24px;
+    background-color: var(--theme-brand);
+    svg {
+      padding: 6px;
+      width: 100%;
+    }
+  }
+  .logo_wrapper {
+    padding-left: 20px;
+    color: var(--theme-color);
+    max-width: 142px;
+  }
+}

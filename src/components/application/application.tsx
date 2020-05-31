@@ -8,6 +8,9 @@ import { routes } from './routes'
 import { NavigationTop } from '../navigation-top'
 import { NavigationSide } from '../navigation-side'
 
+import './styles.scss'
+import { ApplicationMenu } from '../application-menu'
+
 const Application = () => {
   const [sideNavWidth, setSideNavWidth] = useState(196)
   const [themeColor, setThemeColor] = useState('dark')
@@ -21,12 +24,15 @@ const Application = () => {
             setSideNavWidth(sideNavWidth + d.width)
           }}
         >
+          <div className='sidebar h-screen overflow-x-hidden overflow-y-auto'>
+            <ApplicationMenu />
+            <NavigationSide />
+          </div>
+        </Resizable>
+        <section className='application__section'>
           <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>
             toggle theme
           </button>
-          <NavigationSide />
-        </Resizable>
-        <section className='application__section'>
           <NavigationTop />
           <main>
             <Switch>

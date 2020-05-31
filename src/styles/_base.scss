@@ -5,12 +5,17 @@ html {
 body {
   height: 100%;
   overflow: hidden;
-  background-color: $brand-black;
-  color: $brand-primary;
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
+  // These are fallback colours.
+  // Main app colours are defined at the Application Component Level
+  background-color: $brand-black;
+  color: $brand-primary;
+  ::selection {
+    background: $brand-primary;
+  }
 }
 
 #app {
