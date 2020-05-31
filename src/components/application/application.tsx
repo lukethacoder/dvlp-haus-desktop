@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NavigationTop } from '../navigation-top'
 import { NavigationSide } from '../navigation-side'
 import { Resizable } from 're-resizable'
+import { Home } from '../home'
 
 const Application = () => {
   const [sideNavWidth, setSideNavWidth] = useState(196)
@@ -11,7 +12,7 @@ const Application = () => {
     <div className={`application__container ${themeColor}`}>
       <Resizable
         size={{ width: sideNavWidth, height: 'auto' }}
-        onResizeStop={(e: any, direction: any, ref: any, d: any) => {
+        onResizeStop={(d: any) => {
           setSideNavWidth(sideNavWidth + d.width)
         }}
       >
@@ -21,8 +22,9 @@ const Application = () => {
         <NavigationSide />
       </Resizable>
       <section className='application__section'>
-        <NavigationTop />
+        {/* <NavigationTop /> */}
         <main>
+          <Home />
           <div className='b-10'>b-10</div>
           <div className='b-20'>b-20</div>
           <div className='b-30'>b-30</div>

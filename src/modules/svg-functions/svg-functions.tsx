@@ -1,6 +1,6 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
-const SvgFunctions = () => (
+const SvgFunctions: FC = () => (
   <div>
     <h3>SvgFunctions</h3>
   </div>

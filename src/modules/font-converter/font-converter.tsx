@@ -1,8 +1,9 @@
-import * as React from 'react'
+import React, { FC } from 'react'
 
-const FontConverter = () => (
+const FontConverter: FC = () => (
   <div>
-    <h3>font converter</h3>
+    <h3 className='text-white'>font converter</h3>
+    <h3 className='text-white'>font converter</h3>
   </div>
 )
 
