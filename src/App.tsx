@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import { Application } from '~/src/components/application'
 import { add } from '../rust/lib.rs'
 
-import { ModuleSearch } from '~/src/components/module-search'
+import '~/src/styles/tailwind.css'
 
 class App extends Component {
   calcFromRust() {
@@ -17,8 +17,6 @@ class App extends Component {
         <h1>dvlp.haus</h1>
         <button onClick={this.calcFromRust}>calc rust</button>
         <Application />
-        {/* <Header />
-        <RustExample /> */}
       </div>
     )
   }
