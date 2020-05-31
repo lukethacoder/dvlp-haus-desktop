@@ -1,39 +1,49 @@
 import React, { useState } from 'react'
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+
+import { Resizable } from 're-resizable'
+
+import { routes } from './routes'
 import { NavigationTop } from '../navigation-top'
 import { NavigationSide } from '../navigation-side'
-import { Resizable } from 're-resizable'
-import { Home } from '../home'
 
 const Application = () => {
   const [sideNavWidth, setSideNavWidth] = useState(196)
   const [themeColor, setThemeColor] = useState('dark')
 
   return (
-    <div className={`application__container ${themeColor}`}>
-      <Resizable
-        size={{ width: sideNavWidth, height: 'auto' }}
-        onResizeStop={(d: any) => {
-          setSideNavWidth(sideNavWidth + d.width)
-        }}
-      >
-        <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>
-          toggle theme
-        </button>
-        <NavigationSide />
-      </Resizable>
-      <section className='application__section'>
-        {/* <NavigationTop /> */}
-        <main>
-          <Home />
-          <div className='b-10'>b-10</div>
-          <div className='b-20'>b-20</div>
-          <div className='b-30'>b-30</div>
-          <div className='b-40'>b-40</div>
-          <div className='b-50'>b-50</div>
-          {/* child routes go here  */}
-        </main>
-      </section>
-    </div>
+    <Router>
+      <div className={`application__container flex ${themeColor}`}>
+        <Resizable
+          size={{ width: sideNavWidth, height: 'auto' }}
+          onResizeStop={(d: any) => {
+            setSideNavWidth(sideNavWidth + d.width)
+          }}
+        >
+          <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>
+            toggle theme
+          </button>
+          <NavigationSide />
+        </Resizable>
+        <section className='application__section'>
+          <NavigationTop />
+          <main>
+            <Switch>
+              {routes.map((route, index) => (
+                <Route
+                  key={index}
+                  path={route.path}
+                  exact={route.exact}
+                  children={<route.main />}
+                />
+              ))}
+            </Switch>
+            {/* child routes go here  */}
+          </main>
+        </section>
+      </div>
+    </Router>
   )
 }
 
