@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Fragment } from 'react'
 import { apiModules } from '../../api'
 
 const ModuleSearch = () => {
@@ -43,29 +43,29 @@ const ModuleSearch = () => {
   }, [])
 
   return (
-    <div>
-      <input value={search} onChange={(e) => handleSearchChange(e)} className='w-full' />
-      <ul>
-        {!loading ? (
-          modules.length >= 1 ? (
-            modules.map((item: any) => (
-              <li key={item.name}>
-                {item.name}
-                <div>
-                  {item?.icon?.svg !== undefined ? (
-                    <img src={`data:image/svg+xml;utf8,${item.icon.svg}`} />
-                  ) : null}
-                </div>
-              </li>
-            ))
-          ) : (
-            <p>no modules found related to "{search ? search : ' '}"</p>
-          )
+    <Fragment>
+      <li>
+        <input value={search} onChange={(e) => handleSearchChange(e)} className='w-full' />
+      </li>
+      {!loading ? (
+        modules.length >= 1 ? (
+          modules.map((item: any) => (
+            <li key={item.name}>
+              {item.name}
+              <div>
+                {item?.icon?.svg !== undefined ? (
+                  <img src={`data:image/svg+xml;utf8,${item.icon.svg}`} />
+                ) : null}
+              </div>
+            </li>
+          ))
         ) : (
-          <p>loading modules</p>
-        )}
-      </ul>
-    </div>
+          <p>no modules found related to "{search ? search : ' '}"</p>
+        )
+      ) : (
+        <p>loading modules</p>
+      )}
+    </Fragment>
   )
 }
 

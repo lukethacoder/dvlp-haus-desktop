@@ -5,5 +5,10 @@ import { IModuleConfig } from '~/src/types/global'
 
 import { config as FontConverterConfig } from './font-converter'
 import { config as SvgFunctionsConfig } from './svg-functions'
+import { config as RustExampleConfig } from './rust-example'
 
-export const MODULE_CONFIG: IModuleConfig[] = [FontConverterConfig, SvgFunctionsConfig]
+export const MODULE_CONFIG: IModuleConfig[] = [
+  FontConverterConfig,
+  SvgFunctionsConfig,
+  RustExampleConfig,
+]
