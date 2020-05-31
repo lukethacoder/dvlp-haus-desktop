@@ -20,7 +20,9 @@ const NavigationSide = () => (
           <Link to='/two'>two---</Link>
         </li>
       </ul>
-      <ModuleSearch />
+      <ul>
+        <ModuleSearch />
+      </ul>
     </nav>
   </div>
 )

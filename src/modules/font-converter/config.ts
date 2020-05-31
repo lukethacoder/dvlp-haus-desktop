@@ -1,6 +1,9 @@
 import { IModuleConfig } from '~/src/types/global'
 
+import { FontConverter } from './font-converter'
+
 export const config: IModuleConfig = {
+  component: FontConverter,
   name: 'Font Converter',
   slug: 'font-converter',
   desc: 'easily convert font values',

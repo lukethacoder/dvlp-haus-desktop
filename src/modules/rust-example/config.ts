@@ -1,6 +1,8 @@
 import { IModuleConfig } from '~/src/types/global'
+import { RustExample } from './rust-example'
 
 export const config: IModuleConfig = {
+  component: RustExample,
   name: 'Rust Example',
   slug: 'rust-example',
   desc: 'Example of Rust Module Usage',

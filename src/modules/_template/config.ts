@@ -1,6 +1,8 @@
 import { IModuleConfig } from '~/src/types/global'
+import { Template } from './template'
 
 export const config: IModuleConfig = {
+  component: Template,
   name: 'Template',
   slug: 'template',
   desc: 'template test',

@@ -1,6 +1,8 @@
 import { IModuleConfig } from '~/src/types/global'
+import { SvgFunctions } from './svg-functions'
 
 export const config: IModuleConfig = {
+  component: SvgFunctions,
   name: 'SVG Functions',
   slug: 'svg-functions',
   desc: 'fun with svg code',

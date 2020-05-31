@@ -1,4 +1,5 @@
 import React, { useEffect, useState, Fragment } from 'react'
+import { Link } from 'react-router-dom'
 import { apiModules } from '../../api'
 
 const ModuleSearch = () => {
@@ -51,12 +52,14 @@ const ModuleSearch = () => {
         modules.length >= 1 ? (
           modules.map((item: any) => (
             <li key={item.name}>
-              {item.name}
-              <div>
-                {item?.icon?.svg !== undefined ? (
-                  <img src={`data:image/svg+xml;utf8,${item.icon.svg}`} />
-                ) : null}
-              </div>
+              <Link to={`/${item.slug}`}>
+                <div>
+                  {item?.icon?.svg !== undefined ? (
+                    <img src={`data:image/svg+xml;utf8,${item.icon.svg}`} />
+                  ) : null}
+                  {item.name}
+                </div>
+              </Link>
             </li>
           ))
         ) : (
