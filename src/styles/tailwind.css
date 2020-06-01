@@ -1,3 +1,24 @@
+/* Must define :root vars here or else tailwind won't pick them up */
+:root {
+  --theme-brand: hsl(353, 95%, 57%);
+  --theme-color: #ffffff;
+  --theme-background: #020203;
+  --theme-font: #ffffff;
+  --theme-accent: hsl(353, 95%, 57%);
+  --theme-accent-font: hsl(353, 95%, 57%);
+  --theme-border: #242736;
+  --theme-side-nav-bg: #191c25;
+  --theme-top-nav-bg: hsl(225, 22%, 11%);
+  --theme-icon: #fbfcfe;
+  --theme-gradient:
+    linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(250, 41, 65, 0) 0%,
+      rgba(250, 41, 65, 0.2) 100%
+    );
+}
+
 /* purgecss start ignore */
 @tailwind base;
 @tailwind components;

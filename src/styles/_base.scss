@@ -7,7 +7,7 @@ body {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: theme('fontFamily.sans');
   box-sizing: border-box;
   // These are fallback colours.
   // Main app colours are defined at the Application Component Level
@@ -29,4 +29,94 @@ a {
 
 .center {
   text-align: center;
+}
+
+h1 {
+  font-size: theme('fontSize.4xl');
+}
+h2 {
+  font-size: theme('fontSize.3xl');
+}
+
+h3 {
+  font-size: theme('fontSize.2xl');
+}
+h4 {
+  font-size: theme('fontSize.xl');
+}
+h5 {
+  font-size: theme('fontSize.lg');
+}
+h6 {
+  font-size: theme('fontSize.base');
+}
+p {
+  font-size: theme('fontSize.base');
+}
+
+input,
+select {
+  background-color: theme('colors.transparent');
+  border: 1px solid theme('colors.color');
+  padding: 4px 8px;
+  transition: border 0.3s cubic-bezier(0, 0, 0.175, 1);
+  &:focus {
+    border: 1px solid theme('colors.brand');
+    outline: none;
+  }
+}
+
+input {
+}
+select {
+  * {
+    background-color: theme('colors.background');
+    &:focus {
+      border: 1px solid theme('colors.brand');
+      outline: none;
+    }
+  }
+}
+option {
+  background-color: theme('colors.background');
+  &:focus {
+    border: 1px solid theme('colors.brand');
+    outline: none;
+  }
+}
+
+button {
+  border-style: solid;
+  &:focus,
+  &:active {
+    box-shadow: none;
+    outline: none;
+  }
+  &.btn-primary,
+  &.btn-secondary {
+    border-width: 2px;
+    font-weight: theme('fontWeight.semibold');
+    transition: all 0.24s cubic-bezier(0, 0, 0.175, 1);
+  }
+  &.btn-primary {
+    color: theme('colors.color');
+    background-color: theme('colors.brand');
+    border-color: theme('colors.brand');
+    &:hover,
+    &:focus {
+      color: theme('colors.brand');
+      background-color: theme('colors.transparent');
+    }
+  }
+  &.btn-secondary {
+    color: theme('colors.brand');
+    border-color: theme('colors.brand');
+    background-color: theme('colors.transparent');
+    &:hover,
+    &:focus {
+      color: theme('colors.color');
+      background-color: theme('colors.brand');
+      border-color: theme('colors.brand');
+    }
+  }
 }

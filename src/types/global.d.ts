@@ -24,3 +24,7 @@ declare interface IReactRouterLink {
     component?: FC
   }
 }
+
+declare interface IModuleWrapperProps {
+  className?: string
+}

@@ -11,10 +11,16 @@ module.exports = {
       xl: '1280px',
     },
     colors: {
-      primary: 'var(--theme-primary)',
-      secondary: 'var(--theme-secondary)',
-      tertiary: 'var(--theme-tertiary)',
+      primary: 'var(--color-primary)',
+      brand: 'var(--theme-brand)',
+      color: 'var(--theme-color)',
       background: 'var(--theme-background)',
+      'side-nav-bg': 'var(--theme-side-nav-bg)',
+      font: 'var(--theme-font)',
+      accent: 'var(--theme-accent)',
+      'accent-font': 'var(--theme-accent-font)',
+      border: 'var(--theme-border)',
+      icon: 'var(--theme-icon)',
 
       transparent: 'transparent',
       todo: '#117869',
@@ -175,9 +181,6 @@ module.exports = {
       '4xl': '2.5rem', // 40px
       '5xl': '3.75rem', // 60px
       '6xl': '4rem', // 64px
-      '7xl': '5rem', // 80px
-      '8xl': '7.5rem', // 120px
-      '9xl': '8.375rem', // 134px
     },
     fontWeight: {
       // hairline: '100',

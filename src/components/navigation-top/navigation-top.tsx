@@ -1,12 +1,16 @@
 import React from 'react'
 
+import './styles.scss'
+
 const NavigationTop = () => {
   return (
-    <div className='navigation_top'>
-      <div className='navigation_top__left_side'>
+    <div className='navigation_top flex bg-side-nav-bg'>
+      <div className='w-1/2 flex navigation_top__left_side'>
+        <p>{'<'}</p>
+        <p>{'>'}</p>
         <p>H - Home</p>
       </div>
-      <div className='navigation_top__right_side'>
+      <div className='w-1/2 flex navigation_top__right_side'>
         {/* <div className='user_profile'>
           <div className='user_profile__image'>
             <img
@@ -17,10 +21,6 @@ const NavigationTop = () => {
           <p>User Name</p>
           <p>ARROW</p>
         </div> */}
-
-        <div className='settings_cog'>
-          <p>I</p>
-        </div>
       </div>
     </div>
   )

@@ -1,10 +1,10 @@
 .navigation_top {
   background: var(--theme-side-nav-bg);
-  height: 108px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  border-bottom: 1px solid var(--theme-border);
   .navigation_top__left_side {
   }
   .navigation_top__right_side {
@@ -26,19 +26,6 @@
           width: 100%;
           height: 100%;
         }
-      }
-    }
-    .settings_cog {
-      height: 28px;
-      width: 28px;
-      border-radius: 240px;
-      background-color: var(--theme-brand);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      p {
-        color: $brand-white;
-        margin: 0;
       }
     }
   }

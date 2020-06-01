@@ -3,11 +3,13 @@
 
 import { IModuleConfig } from '~/src/types/global'
 
+import { config as TemplateConfig } from './_template'
 import { config as FontConverterConfig } from './font-converter'
 import { config as SvgFunctionsConfig } from './svg-functions'
 import { config as RustExampleConfig } from './rust-example'
 
 export const MODULE_CONFIG: IModuleConfig[] = [
+  TemplateConfig,
   FontConverterConfig,
   SvgFunctionsConfig,
   RustExampleConfig,

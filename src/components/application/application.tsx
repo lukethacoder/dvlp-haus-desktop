@@ -24,7 +24,7 @@ const Application = () => {
             setSideNavWidth(sideNavWidth + d.width)
           }}
         >
-          <div className='sidebar h-screen overflow-x-hidden overflow-y-auto'>
+          <div className='sidebar h-screen overflow-x-hidden overflow-y-auto bg-side-nav-bg'>
             <ApplicationMenu />
             <NavigationSide />
           </div>
