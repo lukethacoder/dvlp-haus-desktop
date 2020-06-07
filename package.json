@@ -38,7 +38,6 @@
     "bundlesize": "^0.18.0",
     "concurrently": "^5.0.2",
     "cross-env": "5.2.0",
-    "electron": "4.0.1",
     "electron-builder": "20.38.4",
     "electron-devtools-installer": "^3.0.0",
     "kind-of": "^6.0.3",
@@ -50,9 +49,11 @@
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "autoprefixer": "^9.8.0",
+    "electron": "^9.0.2",
     "electron-download": "^4.1.1",
     "electron-is-dev": "1.0.1",
     "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^5.2.0",
     "re-resizable": "^6.4.0",
     "react": "16.13.0",
     "react-dom": "16.13.0",
@@ -81,7 +82,8 @@
   "build": {
     "appId": "com.luke",
     "files": [
-      "src/electron.js",
+      "preload.js",
+      "electron.js",
       "src/assets/*",
       "build/**/*"
     ],

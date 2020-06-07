@@ -42,7 +42,7 @@ const Template: FC = () => (
                         <div className='input_radio__background_inner'></div>
                       </div>
                     </div>
-                    <label for='uno'>Uno</label>
+                    <label htmlFor='uno'>Uno</label>
                   </div>
                 </li>
                 <li>
@@ -54,7 +54,7 @@ const Template: FC = () => (
                         <div className='input_radio__background_inner'></div>
                       </div>
                     </div>
-                    <label for='dos'>Dos</label>
+                    <label htmlFor='dos'>Dos</label>
                   </div>
                 </li>
                 <li>
@@ -66,7 +66,7 @@ const Template: FC = () => (
                         <div className='input_radio__background_inner'></div>
                       </div>
                     </div>
-                    <label for='tres'>Tres</label>
+                    <label htmlFor='tres'>Tres</label>
                   </div>
                 </li>
               </ul>

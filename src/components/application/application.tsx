@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
-import { BrowserRouter as Router, Switch, Route, withRouter } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Resizable } from 're-resizable'
 
@@ -10,10 +10,23 @@ import { NavigationSide } from '../navigation-side'
 
 import './styles.scss'
 import { ApplicationMenu } from '../application-menu'
+import { useStore } from '~/src/hooks/use-store/use-store'
 
 const Application = () => {
   const [sideNavWidth, setSideNavWidth] = useState(196)
   const [themeColor, setThemeColor] = useState('dark')
+
+  const [themeStore, setThemeStore] = useStore('theme', 'dark')
+
+  useEffect(() => {
+    setThemeColor(themeStore)
+  }, [themeStore])
+
+  useEffect(() => {
+    // get initial value saved in local cache
+    console.log('themeStore ', themeStore)
+    setThemeColor(themeStore)
+  }, [])
 
   return (
     <Router>
@@ -30,10 +43,12 @@ const Application = () => {
           </div>
         </Resizable>
         <section className='application__section'>
-          <button onClick={() => setThemeColor(themeColor === 'dark' ? 'light' : 'dark')}>
-            toggle theme
-          </button>
-          <NavigationTop />
+          <NavigationTop
+            toggleTheme={() =>
+              setThemeColor(setThemeStore('theme', themeStore === 'dark' ? 'light' : 'dark'))
+            }
+            theme={themeColor}
+          />
           <main>
             <Switch>
               {routes.map((route, index) => (

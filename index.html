@@ -9,6 +9,17 @@
   </head>
   <body>
     <div id="root"></div>
+
     <script src="./src/index.tsx"></script>
+    <!-- <script src="./src/index.tsx"></script> -->
+
+    <script>
+      if (window.api) {
+        window.api.receive('fromMain', (data) => {
+          console.log(`Received ${data} from main process`)
+        })
+        window.api.send('toMain', 'some data')
+      }
+    </script>
   </body>
 </html>

@@ -1,10 +1,10 @@
-const electron = require('electron')
-const app = electron.app
-const BrowserWindow = electron.BrowserWindow
+// const electron = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 const path = require('path')
 const installer = require('electron-devtools-installer')
 const isDev = require('electron-is-dev')
+const Store = require('electron-store')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -34,9 +34,12 @@ async function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1024,
     height: 600,
+    backgroundColor: '#141414',
     webPreferences: {
-      nodeIntegration: true,
-      nodeIntegrationInWorker: true, // web workers
+      nodeIntegration: false,
+      contextIsolation: true, // protect against prototype pollution
+      enableRemoteModule: false, // turn off remote
+      preload: path.join(__dirname, 'preload.js'), // use a preload script
       // webSecurity: false,
     },
   })
@@ -99,3 +102,82 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+//json-schema.org
+const schema = {
+  theme: {
+    type: 'string',
+  },
+  // add more store items here
+}
+
+// saves config.json to: C:\Users\USER_NAME\AppData\Roaming\dvlp.haus
+const store = new Store({ schema })
+
+ipcMain.on('get-value', (e, message) => {
+  let responseObj
+
+  try {
+    const { key } = message
+
+    if (key) {
+      responseObj = {
+        success: true,
+        message: `Successfully found key of ${key}`,
+        key: key,
+        value: store.get(key),
+      }
+    } else {
+      responseObj = {
+        success: false,
+        message: 'Invalid object passed. make sure you pass { key: key, value: value }',
+      }
+    }
+  } catch (e) {
+    // If error also return initialValue
+    console.log(e)
+    responseObj = {
+      success: false,
+      message: e,
+    }
+  }
+
+  // Send result back to renderer process
+  mainWindow.webContents.send('got-value', responseObj)
+})
+
+ipcMain.on('set-value', (e, message) => {
+  let responseObj
+
+  try {
+    const { key, value } = message
+
+    if (key && value) {
+      store.set(key, value)
+
+      responseObj = {
+        success: true,
+        message: `Successfully updated key of ${key}, with new value of ${value}`,
+        key: store.get(key),
+        value: value,
+      }
+    } else {
+      responseObj = {
+        success: false,
+        message: 'Invalid object passed. make sure you pass { key: key, value: value }',
+        key: store.get(key),
+        value: value,
+      }
+    }
+  } catch (e) {
+    // If error also return initialValue
+    console.log(e)
+    responseObj = {
+      success: false,
+      message: e,
+    }
+  }
+
+  // Send result back to renderer process
+  mainWindow.webContents.send('set-value-main', responseObj)
+})

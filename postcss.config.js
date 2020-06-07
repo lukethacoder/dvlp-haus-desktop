@@ -1,25 +1,9 @@
 const purgecss = require('@fullhuman/postcss-purgecss')({
   // Specify the paths to all of the template files in your project
-  content: [
-    './pages/*.tsx',
-    './src/components/**/*.tsx',
-    './src/components/**/*.ts',
-    './src/_pages/**/*.tsx',
-    './src/icons/**/*.tsx',
-  ],
+  content: ['./modules/*.tsx', './src/components/**/*.tsx'],
 
   // make sure css reset isnt removed on html and body
-  whitelist: [
-    'html',
-    'body',
-    'page__transition',
-    'page__transition-enter',
-    'page__transition-enter-active',
-    'page__transition-enter-done',
-    'page__transition-exit',
-    'page__transition-exit-active',
-    'page__transition-exit-done',
-  ],
+  whitelist: ['html', 'body'],
 
   // Include any special characters you're using in this regular expression
   defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],

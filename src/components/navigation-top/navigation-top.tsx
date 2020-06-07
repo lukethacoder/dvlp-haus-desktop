@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 
 import './styles.scss'
-import { ChevronLeft, ChevronRight } from '~/src/icons'
+import { ChevronLeft, ChevronRight, Sun, Moon } from '~/src/icons'
 
 const NavigationTopMain = (props: any) => {
   console.log('props ', props)
@@ -22,7 +22,12 @@ const NavigationTopMain = (props: any) => {
           <ChevronRight />
         </div>
       </div>
-      <div className='w-1/2 flex navigation_top__right_side'>
+      <div className='w-1/2 flex navigation_top__right_side justify-end'>
+        <button onClick={() => props.toggleTheme()}>
+          <div className='w-8 h-8 px-2 flex items-center text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'>
+            {props.theme === 'dark' ? <Sun /> : <Moon />}
+          </div>
+        </button>
         {/* <div className='user_profile'>
           <div className='user_profile__image'>
             <img
