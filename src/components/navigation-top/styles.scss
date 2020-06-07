@@ -5,6 +5,7 @@
   justify-content: space-between;
   flex-direction: row;
   border-bottom: 1px solid var(--theme-border);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0.175, 1);
   .navigation_top__left_side {
   }
   .navigation_top__right_side {

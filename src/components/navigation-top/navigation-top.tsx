@@ -1,14 +1,26 @@
 import React from 'react'
+import { withRouter } from 'react-router-dom'
 
 import './styles.scss'
+import { ChevronLeft, ChevronRight } from '~/src/icons'
 
-const NavigationTop = () => {
+const NavigationTopMain = (props: any) => {
+  console.log('props ', props)
   return (
     <div className='navigation_top flex bg-side-nav-bg'>
       <div className='w-1/2 flex navigation_top__left_side'>
-        <p>{'<'}</p>
-        <p>{'>'}</p>
-        <p>H - Home</p>
+        <div
+          className='px-3 cursor-pointer flex w-8 h-8 text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
+          onClick={() => props.history.goBack()}
+        >
+          <ChevronLeft />
+        </div>
+        <div
+          className='px-3 cursor-pointer flex w-8 h-8 text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
+          onClick={() => props.history.goForward()}
+        >
+          <ChevronRight />
+        </div>
       </div>
       <div className='w-1/2 flex navigation_top__right_side'>
         {/* <div className='user_profile'>
@@ -25,5 +37,7 @@ const NavigationTop = () => {
     </div>
   )
 }
+
+const NavigationTop = withRouter(NavigationTopMain)
 
 export { NavigationTop }
