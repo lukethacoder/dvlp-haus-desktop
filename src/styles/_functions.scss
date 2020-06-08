@@ -1,0 +1,119 @@
+/**
+  * rem - convert PX font value to REM
+  * @param {string} $size     - px font size (e.g. 16px, 8px etc.)
+  
+  * @return {string}          - rem based font value
+**/
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+/**
+ * Replace - Replace a string with a string
+
+ * @param  {string} $string   - String to be manipulated
+ * @param  {string} $search   - Value to be replaced
+ * @param  {string} $replace  - String to replace original string with
+
+ * @return {string}           - The manipulated string with replaced values
+**/
+@function stringReplace($string, $search, $replace: '') {
+  @if type-of($string) != 'string' {
+    @error "Invalid or null $string value passed";
+  }
+
+  @if type-of($search) != 'string' {
+    @error "Invalid or null $search value passed";
+  }
+
+  @if type-of($replace) != 'string' {
+    @error "Invalid or null $replace value passed";
+  }
+
+  $index: str-index($string, $search);
+
+  @return if(
+    $index,
+    str-slice($string, 1, $index - 1) + $replace +
+      stringReplace(str-slice($string, $index + str-length($search)), $search, $replace),
+    $string
+  );
+}
+
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace +
+      str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/**
+ * SVG to URI - converts SVG into dataURI
+
+ * @param {string} $svg       - SVG file
+
+ * @return {string}           - dataURI
+**/
+@function svgToURI($svg, $color) {
+  @if type-of($svg) != 'string' {
+    @error "Invalid Type: $svg must be a single string!";
+  }
+  @if type-of($color) != 'string' {
+    @error "Invalid Type: $color must be a single string!";
+  }
+
+  @if not str-index($svg, xmlns) {
+    $svg: stringReplace($svg, '<svg', '<svg xmlns="http://www.w3.org/2000/svg"');
+  }
+
+  $encoded: '';
+  $slice: 2000;
+  $index: 0;
+  $loops: ceil(
+    str-length($svg) / $slice
+  ); // Chunk up string in order to avoid "stack level too deep" error
+
+  @for $i from 1 through $loops {
+    $chunk: str-slice($svg, $index, $index + $slice - 1);
+
+    $chunk: stringReplace($chunk, '"', "'");
+    $chunk: stringReplace($chunk, '	', ' ');
+    $chunk: stringReplace($chunk, '\a', ' ');
+    $chunk: stringReplace($chunk, '  ', ' ');
+    $chunk: stringReplace($chunk, '%', '%25');
+    $chunk: stringReplace($chunk, '&', '%26');
+    $chunk: stringReplace($chunk, '#', '%23');
+    $chunk: stringReplace($chunk, '{', '%7B');
+    $chunk: stringReplace($chunk, '}', '%7D');
+    $chunk: stringReplace($chunk, '<', '%3C');
+    $chunk: stringReplace($chunk, '>', '%3E');
+
+    $encoded: #{$encoded}#{$chunk};
+    $index: $index + $slice;
+  }
+
+  $encoded_c: '';
+  $slice_c: 2000;
+  $index_c: 0;
+  $loops_c: ceil(
+    str-length($color) / $slice_c
+  ); // Chunk up string in order to avoid "stack level too deep" error
+
+  @for $i_c from 1 through $loops_c {
+    $chunk: str-slice($color, $index_c, $index_c + $slice_c - 1);
+
+    $chunk: stringReplace($chunk, '#', '%23');
+
+    $encoded_c: #{$encoded_c}#{$chunk};
+    $index_c: $index_c + $slice_c;
+  }
+
+  $colored_icon: str-replace($encoded, 'currentColor', $encoded_c);
+
+  @return url('data:image/svg+xml,#{ $colored_icon }');
+}

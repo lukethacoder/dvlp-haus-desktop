@@ -1,0 +1,30 @@
+/* base bg reset */
+@mixin bg_reset($size) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-position: center center;
+}
+
+@mixin cubic_bezier($target: all) {
+  transition: $target 0.24s cubic-bezier(0, 0, 0.175, 1);
+}
+
+/* remove user select (blue boxes / odd outlines) when clicking items */
+@mixin no_select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* change autocomplete styles in webkit */
+@mixin autofill {
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:hover {
+    @content;
+  }
+}

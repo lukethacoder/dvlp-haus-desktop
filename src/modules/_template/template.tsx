@@ -32,10 +32,10 @@ const Template: FC = () => (
           <div className='w-1/2 p-2'>
             <fieldset>
               <legend>Radio Button Test</legend>
-              <ul>
+              <ul className='flex flex-col'>
                 <li>
                   <div className='input__radio_checkbox_wrapper flex'>
-                    <div>
+                    <div className='input__radio_input'>
                       <input name='radioButtonExample' id='uno' type='radio' value='Uno' />
                       <div className='input_radio__background'>
                         <div className='input_radio__background_outer'></div>
@@ -47,7 +47,7 @@ const Template: FC = () => (
                 </li>
                 <li>
                   <div className='input__radio_checkbox_wrapper flex'>
-                    <div>
+                    <div className='input__radio_input'>
                       <input name='radioButtonExample' id='dos' type='radio' value='Dos' />
                       <div className='input_radio__background'>
                         <div className='input_radio__background_outer'></div>
@@ -59,7 +59,7 @@ const Template: FC = () => (
                 </li>
                 <li>
                   <div className='input__radio_checkbox_wrapper flex'>
-                    <div>
+                    <div className='input__radio_input'>
                       <input name='radioButtonExample' id='tres' type='radio' value='Tres' />
                       <div className='input_radio__background'>
                         <div className='input_radio__background_outer'></div>
@@ -67,6 +67,134 @@ const Template: FC = () => (
                       </div>
                     </div>
                     <label htmlFor='tres'>Tres</label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <section className='flex -mx-2'>
+          <div className='w-1/2 p-2'>
+            <fieldset>
+              <legend>Checkbox Button Test</legend>
+              <ul className='flex flex-col'>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__checkbox_input'>
+                      <input
+                        name='checkboxButtonExample'
+                        id='uno'
+                        type='checkbox'
+                        value='Uno'
+                        className='checkbox_input'
+                      />
+                      <div className='input_checkbox__background'>
+                        <div className='input_checkbox__background_outer'></div>
+                        <div className='input_checkbox__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='uno'>Uno</label>
+                  </div>
+                </li>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__checkbox_input'>
+                      <input
+                        name='checkboxButtonExample'
+                        id='dos'
+                        type='checkbox'
+                        value='Dos'
+                        className='checkbox_input'
+                      />
+                      <div className='input_checkbox__background'>
+                        <div className='input_checkbox__background_outer'></div>
+                        <div className='input_checkbox__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='dos'>Dos</label>
+                  </div>
+                </li>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__checkbox_input'>
+                      <input
+                        name='checkboxButtonExample'
+                        id='tres'
+                        type='checkbox'
+                        value='Tres'
+                        className='checkbox_input'
+                      />
+                      <div className='input_checkbox__background'>
+                        <div className='input_checkbox__background_outer'></div>
+                        <div className='input_checkbox__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='tres'>Tres</label>
+                  </div>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+        </section>
+
+        <section className='flex -mx-2'>
+          <div className='w-1/2 p-2'>
+            <fieldset>
+              <legend>Switch Button Test</legend>
+              <ul className='flex flex-col'>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__switch_input'>
+                      <input
+                        name='switchButtonExample'
+                        id='unoSwitch'
+                        type='checkbox'
+                        value='Uno'
+                        className='switch_input'
+                      />
+                      <div className='input_switch__background'>
+                        <div className='input_switch__background_outer'></div>
+                        <div className='input_switch__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='unoSwitch'>Uno</label>
+                  </div>
+                </li>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__switch_input'>
+                      <input
+                        name='switchButtonExample'
+                        id='dosSwitch'
+                        type='checkbox'
+                        value='Dos'
+                        className='switch_input'
+                      />
+                      <div className='input_switch__background'>
+                        <div className='input_switch__background_outer'></div>
+                        <div className='input_switch__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='dosSwitch'>Dos</label>
+                  </div>
+                </li>
+                <li>
+                  <div className='input__radio_checkbox_wrapper flex'>
+                    <div className='input__switch_input'>
+                      <input
+                        name='switchButtonExample'
+                        id='tresSwitch'
+                        type='checkbox'
+                        value='Tres'
+                        className='switch_input'
+                      />
+                      <div className='input_switch__background'>
+                        <div className='input_switch__background_outer'></div>
+                        <div className='input_switch__background_inner'></div>
+                      </div>
+                    </div>
+                    <label htmlFor='tresSwitch'>Tres</label>
                   </div>
                 </li>
               </ul>
