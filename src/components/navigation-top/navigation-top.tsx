@@ -5,7 +5,6 @@ import './styles.scss'
 import { ChevronLeft, ChevronRight, Sun, Moon } from '~/src/icons'
 
 const NavigationTopMain = (props: any) => {
-  console.log('props ', props)
   return (
     <div className='navigation_top flex bg-side-nav-bg'>
       <div className='w-1/2 flex navigation_top__left_side'>

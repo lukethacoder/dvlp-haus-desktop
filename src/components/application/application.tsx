@@ -24,7 +24,7 @@ const Application = () => {
 
   useEffect(() => {
     // get initial value saved in local cache
-    console.log('themeStore ', themeStore)
+    // console.log('themeStore ', themeStore)
     setThemeColor(themeStore)
   }, [])
 
@@ -42,14 +42,14 @@ const Application = () => {
             <NavigationSide />
           </div>
         </Resizable>
-        <section className='application__section'>
+        <section className='application__section w-full h-screen flex flex-col'>
           <NavigationTop
             toggleTheme={() =>
               setThemeColor(setThemeStore('theme', themeStore === 'dark' ? 'light' : 'dark'))
             }
             theme={themeColor}
           />
-          <main>
+          <main className='overflow-auto'>
             <Switch>
               {routes.map((route, index) => (
                 <Route
