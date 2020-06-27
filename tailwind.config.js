@@ -50,6 +50,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      full: '100%',
     },
     backgroundColor: (theme) => theme('colors'),
     backgroundPosition: {
@@ -82,6 +83,7 @@ module.exports = {
     borderWidth: {
       default: '1px',
       '0': '0',
+      '1': '1px',
       '2': '2px',
       '4': '4px',
       '8': '8px',
@@ -337,7 +339,6 @@ module.exports = {
       '9/12': '75%',
       '10/12': '83.333333%',
       '11/12': '91.666667%',
-      full: '100%',
       screen: '100vw',
     }),
     zIndex: {

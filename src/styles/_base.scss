@@ -55,7 +55,8 @@ p {
 }
 
 input,
-select {
+select,
+textarea {
   background-color: theme('colors.transparent');
   border: 1px solid theme('colors.color');
   padding: 4px 8px;

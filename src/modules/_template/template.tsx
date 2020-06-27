@@ -1,5 +1,14 @@
 import React, { FC } from 'react'
+
 import { ModuleWrapper } from '~/src/components/module-wrapper'
+import TerminalSVG from '~/src/assets/img/terminal-solid.svg'
+import BugSVG from '~/src/assets/img/bug-solid.svg'
+import CodeBranchSVG from '~/src/assets/img/code-branch-solid.svg'
+import KeyboardSVG from '~/src/assets/img/keyboard-regular.svg'
+import ProjectDiagramSVG from '~/src/assets/img/project-diagram-solid.svg'
+
+const icons = [TerminalSVG, BugSVG, CodeBranchSVG, KeyboardSVG, ProjectDiagramSVG]
+const colors = ['brand', 'color', 'font', 'accent', 'font-accent']
 
 const Template: FC = () => (
   <ModuleWrapper className='p-4'>
@@ -17,8 +26,8 @@ const Template: FC = () => (
             <input value='' placeholder='test input' className='w-full' />
           </div>
           <div className='w-1/2 p-2'>
-            <select name='numberInSpanish' className='w-full'>
-              <option value='' hidden selected>
+            <select name='numberInSpanish' className='w-full' defaultValue=''>
+              <option value='' hidden>
                 Select...
               </option>
               <option value='Uno'>Uno</option>
@@ -199,6 +208,34 @@ const Template: FC = () => (
                 </li>
               </ul>
             </fieldset>
+          </div>
+        </section>
+
+        <section className='flex -mx-2'>
+          <div className='w-full p-2'>
+            <h6 className='text-color'>SVG Icons feat. mask-image</h6>
+            <ul className='grid grid-cols-4 grid-flow-row gap-2'>
+              {icons.map((icon) => {
+                return colors.map((color) => {
+                  console.log('color ', color)
+                  console.log('icon ', icon)
+                  return (
+                    <li
+                      className={`flex w-full h-full p-4 border-2 border-${color} border-solid hover:border-todo`}
+                    >
+                      <div
+                        className={`icon w-full h-full pb-full bg-${color} hover:bg-todo cursor-pointer`}
+                        style={{
+                          maskImage: `url(${icon})`,
+                          WebkitMaskImage: `url(${icon})`,
+                          paddingBottom: '100%',
+                        }}
+                      ></div>
+                    </li>
+                  )
+                })
+              })}
+            </ul>
           </div>
         </section>
       </form>
