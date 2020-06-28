@@ -90,7 +90,6 @@ $error: red;
       &.input_checkbox__background {
         background-color: var(--theme-color);
         color: var(--theme-font);
-        // color: $brand-secondary;
         .input_checkbox__background_outer {
           z-index: 10;
           color: green;
@@ -107,9 +106,6 @@ $error: red;
         }
       }
       &.input_switch__background {
-        .input_switch__background_outer {
-          // background-color: var(--theme-brand);
-        }
         .input_switch__background_inner {
           transform: translateX(55%);
         }
@@ -243,16 +239,6 @@ $error: red;
     margin: 0;
     position: relative;
     @include cubic_bezier(all);
-    &:hover {
-      .input_switch__background {
-        .input_switch__background_inner {
-          // &:before {
-          //   opacity: 0.04;
-          //   @include cubic_bezier(all);
-          // }
-        }
-      }
-    }
     &:before,
     &:after {
       content: '';
