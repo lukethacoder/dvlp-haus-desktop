@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
+import { ModuleWrapper } from '~/src/components/module-wrapper'
 
 const FontConverter: FC = () => (
-  <div>
-    <h3 className='text-white'>font converter</h3>
-    <h3 className='text-white'>font converter</h3>
-  </div>
+  <ModuleWrapper>
+    <h3 className='text-theme-text'>font converter</h3>
+  </ModuleWrapper>
 )
 
 export { FontConverter }

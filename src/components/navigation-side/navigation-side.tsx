@@ -53,14 +53,14 @@ const static_routes: IReactRouterLink[] = [
       component: HomeIconSVG,
     },
   },
-  {
-    slug: '/favs',
-    name: 'Favourites',
-    exact: true,
-    icon: {
-      component: FavIconSVG,
-    },
-  },
+  // {
+  //   slug: '/favs',
+  //   name: 'Favourites',
+  //   exact: true,
+  //   icon: {
+  //     component: FavIconSVG,
+  //   },
+  // },
   // {
   //   slug: '/modules',
   //   name: 'Modules',

@@ -1,4 +1,6 @@
 import React, { FC } from 'react'
+
+import { ModuleWrapper } from '~/src/components/module-wrapper'
 import { add } from `~/rust/lib.rs`
 
 const RustExample: FC = () => {
@@ -7,10 +9,10 @@ const RustExample: FC = () => {
   }
 
   return (
-    <div>
-      <h3 className='text-white'>RustExample</h3>
+    <ModuleWrapper>
+      <h3>RustExample</h3>
       <button onClick={calcFromRust}>calc rust</button>
-    </div>
+    </ModuleWrapper>
   )
 }
 

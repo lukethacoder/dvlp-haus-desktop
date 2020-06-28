@@ -1,6 +1,6 @@
 import React, { useEffect, useState, Fragment } from 'react'
 
-import { apiModules } from '../../api'
+import { apiModules } from '~/src/api'
 import { NavigationItem } from '~/src/components/navigation-item'
 
 const SearchIconSVG = () => (
