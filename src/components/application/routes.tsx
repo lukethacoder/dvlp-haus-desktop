@@ -9,7 +9,7 @@ import React, { FC } from 'react'
 import { IModuleConfig } from '~/src/types/global'
 import { MODULE_CONFIG } from '~/src/modules'
 
-import { Home } from '../home'
+import { Modules } from '~/src/components/modules'
 
 interface IRoute {
   path: string
@@ -21,12 +21,12 @@ const static_routes: IRoute[] = [
   {
     path: '/',
     exact: true,
-    main: () => <Home />,
+    main: () => <Modules />, // <Home />
   },
-  {
-    path: '/favs',
-    main: () => <h2 className='b-20'>Favourites</h2>,
-  },
+  // {
+  //   path: '/favs',
+  //   main: () => <h2 className='b-20'>Favourites</h2>,
+  // },
   {
     path: '/two',
     main: () => <h2 className='b-30'>two</h2>,
