@@ -1,0 +1,10 @@
+@import '../../styles/mixins';
+
+.emoji__single {
+  border: 1px solid var(--theme-background);
+  cursor: pointer;
+  @include cubic_bezier(background-color);
+  &:hover {
+    border: 1px solid var(--theme-brand);
+  }
+}
