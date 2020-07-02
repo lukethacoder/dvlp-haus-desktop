@@ -353,6 +353,9 @@ module.exports = {
       '11/12': '91.666667%',
       screen: '100vw',
     }),
+    translate: (theme) => ({
+      ...theme('width'),
+    }),
     zIndex: {
       auto: 'auto',
       '0': '0',

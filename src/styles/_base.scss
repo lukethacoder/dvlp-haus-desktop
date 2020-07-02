@@ -58,11 +58,11 @@ input,
 select,
 textarea {
   background-color: theme('colors.transparent');
-  border: 1px solid theme('colors.color');
+  border: 1px solid theme('colors.primary-input');
   padding: 4px 8px;
   transition: border 0.3s cubic-bezier(0, 0, 0.175, 1);
   &:focus {
-    border: 1px solid theme('colors.brand');
+    border: 1px solid theme('colors.secondary-input');
     outline: none;
   }
 }
@@ -71,17 +71,17 @@ input {
 }
 select {
   * {
-    background-color: theme('colors.background');
+    background-color: theme('colors.transparent');
     &:focus {
-      border: 1px solid theme('colors.brand');
+      border: 1px solid theme('colors.primary-input');
       outline: none;
     }
   }
 }
 option {
-  background-color: theme('colors.background');
+  background-color: theme('colors.bg-color');
   &:focus {
-    border: 1px solid theme('colors.brand');
+    border: 1px solid theme('colors.secondary-input');
     outline: none;
   }
 }
@@ -111,24 +111,24 @@ button {
     transition: all 0.24s cubic-bezier(0, 0, 0.175, 1);
   }
   &.btn-primary {
-    color: theme('colors.color');
-    background-color: theme('colors.brand');
-    border-color: theme('colors.brand');
+    color: theme('colors.bg-color');
+    background-color: theme('colors.uno');
+    border-color: theme('colors.uno');
     &:hover,
     &:focus {
-      color: theme('colors.brand');
+      color: theme('colors.uno');
       background-color: theme('colors.transparent');
     }
   }
   &.btn-secondary {
-    color: theme('colors.brand');
-    border-color: theme('colors.brand');
+    color: theme('colors.uno');
+    border-color: theme('colors.uno');
     background-color: theme('colors.transparent');
     &:hover,
     &:focus {
-      color: theme('colors.color');
-      background-color: theme('colors.brand');
-      border-color: theme('colors.brand');
+      color: theme('colors.bg-color');
+      background-color: theme('colors.uno');
+      border-color: theme('colors.uno');
     }
   }
 }

@@ -41,7 +41,7 @@
     height: 100%;
     width: 0;
     right: 0;
-    background: var(--dvlp-feature-gradient-active);
+    background: var(--dvlp-nav-gradient-active);
     transition: width 0.3s cubic-bezier(0, 0, 0.175, 1), opacity 0.3s cubic-bezier(0, 0, 0.175, 1);
     opacity: 0;
   }

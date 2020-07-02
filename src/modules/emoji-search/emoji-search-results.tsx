@@ -20,8 +20,8 @@ const EmojiSearchResultItem: FC<IEmojiSingle> = (props) => {
     >
       <div className='top-0 absolute w-full h-full flex flex-col items-center justify-center z-20'>
         <h4>{item?.unicode}</h4>
-        <div className='emoji__text absolute bottom-0 w-full text-center flex flex-col items-center'>
-          <p className='text-xs whitespace-no-wrap min-w-full w-auto bg-brand px-4 py-1 '>
+        <div className='emoji__text absolute transform translate-y-1/2 bottom-0 w-full text-center flex flex-col items-center'>
+          <p className='text-xs whitespace-no-wrap w-auto bg-bg-color-secondary px-4 py-1 '>
             :{item?.shortcodes?.[0]}:
           </p>
         </div>

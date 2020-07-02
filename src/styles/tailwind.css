@@ -32,7 +32,7 @@
   --dvlp-primary-rgb: 255, 255, 255;
   
   --dvlp-primary-text-color: rgba(var(--dvlp-primary-rgb), 1);
-  --dvlp-secondary-text-color: rgba(var(--dvlp-primary-rgb), 0.5);
+  --dvlp-secondary-text-color: rgba(var(--dvlp-primary-rgb), 0.75);
   
   --dvlp-font-color: #ffffff;
   --dvlp-font-accent: hsl(353, 95%, 57%);
@@ -53,7 +53,7 @@
   --dvlp-box-shadow-rgb: 0, 0, 0;
   --dvlp-box-shadow-active: rgba(var(--dvlp-box-shadow-rgb), 0.1);
   
-  --dvlp-feature-gradient-active:
+  --dvlp-nav-gradient-active:
     linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,

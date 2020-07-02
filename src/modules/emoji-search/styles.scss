@@ -27,6 +27,7 @@
     opacity: 0;
     @include cubic_bezier(opacity);
     p {
+      min-width: calc(100% + 16px);
       @include cubic_bezier(opacity);
     }
   }

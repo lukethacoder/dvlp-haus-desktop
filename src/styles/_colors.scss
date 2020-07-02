@@ -6,6 +6,8 @@ $brand-tertiary: #2c2c2c;
 
 $base-white: #ffffff;
 $base-black: #020203;
+$rgb-base-light: 255, 255, 255;
+$rgb-base-dark: 0, 0, 0;
 
 $brand-white: $base-white;
 $brand-black: hsl(225, 22%, 11%);
@@ -15,17 +17,22 @@ $brand-black-hex: #151821; // #151821
 // Color map //
 $theme-palette: (
   dark: (
-    brand: $brand-primary,
-    color: $brand-white,
-    background: $brand-black,
-    font: $brand-white,
-    accent: $brand-primary,
-    accent-font: $brand-primary,
-    border: #242736,
-    side-nav-bg: #191c25,
-    top-nav-bg: hsl(225, 22%, 11%),
-    icon: #fbfcfe,
-    gradient:
+    uno: $brand-primary,
+    dos: #1f5ef7,
+    tres: #939cea,
+    primary-text-color: rgba(255, 255, 255, 1),
+    secondary-text-color: rgba(255, 255, 255, 0.5),
+    font-color: #ffffff,
+    font-accent: $brand-primary,
+    primary-icon: #ffffff,
+    primary-icon-active: hsl(353, 95%, 57%),
+    primary-input: #ffffff,
+    secondary-input: hsl(353, 95%, 57%),
+    bg-color: #020203,
+    bg-color-secondary: #141414,
+    divider-color: #262626,
+    divider-color-light: #595959,
+    nav-gradient-active:
       linear-gradient(
         90deg,
         rgba(2, 0, 36, 1) 0%,
@@ -34,17 +41,22 @@ $theme-palette: (
       ),
   ),
   light: (
-    brand: $brand-primary,
-    color: $brand-black,
-    background: $brand-white,
-    font: #737580,
-    accent: $brand-secondary,
-    accent-font: $brand-primary,
-    border: #f1f1f1,
-    side-nav-bg: #fbfcfe,
-    top-nav-bg: #fbfcfe,
-    icon: hsl(225, 22%, 11%),
-    gradient:
+    uno: $brand-primary,
+    dos: #1f5ef7,
+    tres: #939cea,
+    primary-text-color: rgba(0, 0, 0, 1),
+    secondary-text-color: rgba(0, 0, 0, 0.5),
+    font-color: $brand-secondary,
+    font-accent: #737580,
+    primary-icon: hsl(225, 22%, 11%),
+    primary-icon-active: hsl(353, 95%, 57%),
+    primary-input: hsl(225, 22%, 11%),
+    secondary-input: hsl(353, 95%, 57%),
+    bg-color: #f1f1f1,
+    bg-color-secondary: #fbfcfe,
+    divider-color: #262626,
+    divider-color-light: #595959,
+    nav-gradient-active:
       linear-gradient(
         90deg,
         rgba(2, 0, 36, 1) 0%,
@@ -61,7 +73,7 @@ $theme-palette: (
     .#{$color} {
       // Loop over each field
       @each $field, $color-swatch in map-get($theme-palette, #{$color}) {
-        --theme-#{$field}: #{$color-swatch};
+        --dvlp-#{$field}: #{$color-swatch};
       }
     }
   }

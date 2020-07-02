@@ -174,12 +174,12 @@ $error: red;
           position: absolute;
           left: 2px;
           top: 6px;
-          background: var(--dvlp-primary-input);
+          background: var(--dvlp-bg-color);
           width: 2px;
           height: 2px;
-          box-shadow: 2px 0 0 var(--dvlp-divider-color), 4px 0 0 var(--dvlp-divider-color),
-            4px -2px 0 var(--dvlp-divider-color), 4px -4px 0 var(--dvlp-divider-color),
-            4px -6px 0 var(--dvlp-divider-color), 4px -8px 0 var(--dvlp-divider-color);
+          box-shadow: 2px 0 0 var(--dvlp-bg-color), 4px 0 0 var(--dvlp-bg-color),
+            4px -2px 0 var(--dvlp-bg-color), 4px -4px 0 var(--dvlp-bg-color),
+            4px -6px 0 var(--dvlp-bg-color), 4px -8px 0 var(--dvlp-bg-color);
           transform: rotate(45deg) scale(0.25);
           opacity: 0;
           @include cubic_bezier();

@@ -20,6 +20,11 @@ const Template: FC = () => (
       <h5 className='text-primary-text-color'>heading h5</h5>
       <h6 className='text-primary-text-color'>heading h6</h6>
 
+      <div className='my-4'>
+        <button className='btn-primary px-2 py-1 mr-2'>btn-primary</button>
+        <button className='btn-secondary px-2 py-1 mr-2'>btn-secondary</button>
+      </div>
+
       <form className='w-full text-primary-text-color'>
         <section className='flex -mx-2'>
           <div className='w-1/2 p-2'>
@@ -239,9 +244,6 @@ const Template: FC = () => (
           </div>
         </section>
       </form>
-
-      <button className='btn-primary px-2 py-1 mr-2'>btn-primary</button>
-      <button className='btn-secondary px-2 py-1 mr-2'>btn-secondary</button>
     </div>
   </ModuleWrapper>
 )
