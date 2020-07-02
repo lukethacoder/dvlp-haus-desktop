@@ -50,7 +50,7 @@ export const Modules: FC = () => {
   return (
     <ModuleWrapper>
       <div className='nav__item module_search px-2 pt-1 pb-4 flex items-center'>
-        <div className='w-4 text-white'>
+        <div className='w-4 text-primary-text-color'>
           <SearchIconSVG />
         </div>
         <input

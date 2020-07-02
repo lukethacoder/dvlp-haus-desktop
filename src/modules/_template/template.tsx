@@ -13,14 +13,14 @@ const colors = ['brand', 'color', 'font', 'accent', 'font-accent']
 const Template: FC = () => (
   <ModuleWrapper className='p-4'>
     <div>
-      <h1 className='text-color'>heading h1</h1>
-      <h2 className='text-color'>heading h2</h2>
-      <h3 className='text-color'>heading h3</h3>
-      <h4 className='text-color'>heading h4</h4>
-      <h5 className='text-color'>heading h5</h5>
-      <h6 className='text-color'>heading h6</h6>
+      <h1 className='text-primary-text-color'>heading h1</h1>
+      <h2 className='text-primary-text-color'>heading h2</h2>
+      <h3 className='text-primary-text-color'>heading h3</h3>
+      <h4 className='text-primary-text-color'>heading h4</h4>
+      <h5 className='text-primary-text-color'>heading h5</h5>
+      <h6 className='text-primary-text-color'>heading h6</h6>
 
-      <form className='w-full'>
+      <form className='w-full text-primary-text-color'>
         <section className='flex -mx-2'>
           <div className='w-1/2 p-2'>
             <input value='' placeholder='test input' className='w-full' />
@@ -213,7 +213,7 @@ const Template: FC = () => (
 
         <section className='flex -mx-2'>
           <div className='w-full p-2'>
-            <h6 className='text-color'>SVG Icons feat. mask-image</h6>
+            <h6 className='text-primary-text-color'>SVG Icons feat. mask-image</h6>
             <ul className='grid grid-cols-4 grid-flow-row gap-2'>
               {icons.map((icon) => {
                 return colors.map((color) => {

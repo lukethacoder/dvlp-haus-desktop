@@ -1,22 +1,71 @@
 /* Must define :root vars here or else tailwind won't pick them up */
 :root {
-  --theme-brand: hsl(353, 95%, 57%);
-  --theme-color: #ffffff;
-  --theme-background: #020203;
-  --theme-font: #ffffff;
-  --theme-accent: hsl(353, 95%, 57%);
-  --theme-accent-font: hsl(353, 95%, 57%);
-  --theme-border: #242736;
-  --theme-side-nav-bg: #191c25;
-  --theme-top-nav-bg: hsl(225, 22%, 11%);
-  --theme-icon: #fbfcfe;
-  --theme-gradient:
+
+  --dvlp-gray-color-1: #ffffff;
+  --dvlp-gray-color-2: #f8f9fa;
+  --dvlp-gray-color-3: #f5f5f5;
+  --dvlp-gray-color-4: #e8e8e8;
+  --dvlp-gray-color-5: #d9d9d9;
+  --dvlp-gray-color-6: #bfbfbf;
+  --dvlp-gray-color-7: #8c8c8c;
+  --dvlp-gray-color-8: #595959;
+  --dvlp-gray-color-9: #262626;
+  --dvlp-gray-color-10: #000000;
+  
+  --dvlp-dark-color-1: #141414;
+  --dvlp-dark-color-2: #1D1D1D;
+  --dvlp-dark-color-3: #262626;
+  --dvlp-dark-color-4: #303030;
+  --dvlp-dark-color-5: #434343;
+  --dvlp-dark-color-6: #5B5B5B;
+  --dvlp-dark-color-7: #7D7D7D;
+  --dvlp-dark-color-8: #ACACAC;
+  --dvlp-dark-color-9: #DBDBDB;
+  --dvlp-dark-color-10: #FFFFFF;
+
+
+
+  --dvlp-uno: hsl(353, 95%, 57%);
+  --dvlp-dos: #1F5EF7;
+  --dvlp-tres: #939CEA;
+  
+  --dvlp-primary-rgb: 255, 255, 255;
+  
+  --dvlp-primary-text-color: rgba(var(--dvlp-primary-rgb), 1);
+  --dvlp-secondary-text-color: rgba(var(--dvlp-primary-rgb), 0.5);
+  
+  --dvlp-font-color: #ffffff;
+  --dvlp-font-accent: hsl(353, 95%, 57%);
+
+  --dvlp-primary-icon: #ffffff;
+  --dvlp-primary-icon-active: hsl(353, 95%, 57%);
+
+  --dvlp-primary-input: #ffffff;
+  --dvlp-secondary-input: hsl(353, 95%, 57%);
+  
+  --dvlp-bg-color: #020203;
+  --dvlp-bg-color-secondary: #141414; 
+
+  --dvlp-divider-color: var(--dvlp-gray-color-9);
+  --dvlp-divider-color-light: var(--dvlp-gray-color-8);
+  --dvlp-divider-active-color: var(--dvlp-gray-color-7);
+  
+  --dvlp-box-shadow-rgb: 0, 0, 0;
+  --dvlp-box-shadow-active: rgba(var(--dvlp-box-shadow-rgb), 0.1);
+  
+  --dvlp-feature-gradient-active:
     linear-gradient(
       90deg,
       rgba(2, 0, 36, 1) 0%,
       rgba(250, 41, 65, 0) 0%,
       rgba(250, 41, 65, 0.2) 100%
     );
+
+  --dvlp-error-color: #ffa940;
+  --dvlp-error-color-dark: #fa8c16;
+
+  --dvlp-success-color: #52c41a;
+
 }
 
 /* purgecss start ignore */

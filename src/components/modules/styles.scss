@@ -1,13 +1,14 @@
 @import '../../styles/mixins';
 
 .module__grid_item {
-  background-color: var(--theme-background);
-  border: 1px solid var(--theme-color);
+  background-color: var(--dvlp-bg-color);
+  border: 1px solid var(--dvlp-divider-color);
+  color: var(--dvlp-secondary-text-color);
   @include cubic_bezier(background-color);
   &:hover {
-    background-color: var(--theme-color);
+    background-color: var(--dvlp-bg-color-secondary);
     * {
-      color: var(--theme-background);
+      color: var(--dvlp-uno);
     }
   }
 }

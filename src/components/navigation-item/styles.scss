@@ -31,7 +31,7 @@
     height: 100%;
     width: 2px;
     right: 0;
-    background-color: var(--theme-brand);
+    background-color: var(--dvlp-uno);
     opacity: 0;
     transition: opacity 0.3s cubic-bezier(0, 0, 0.175, 1);
   }
@@ -41,13 +41,13 @@
     height: 100%;
     width: 0;
     right: 0;
-    background: var(--theme-gradient);
+    background: var(--dvlp-feature-gradient-active);
     transition: width 0.3s cubic-bezier(0, 0, 0.175, 1), opacity 0.3s cubic-bezier(0, 0, 0.175, 1);
     opacity: 0;
   }
   &.active {
-    color: var(--theme-brand);
-    fill: var(--theme-brand);
+    color: var(--dvlp-uno);
+    fill: var(--dvlp-uno);
     &:before {
       opacity: 1;
     }
@@ -56,23 +56,23 @@
       width: 100%;
     }
     svg {
-      color: var(--theme-brand);
-      fill: var(--theme-brand);
+      color: var(--dvlp-uno);
+      fill: var(--dvlp-uno);
     }
     .nav__item_name {
-      color: var(--theme-brand);
+      color: var(--dvlp-uno);
     }
   }
   svg {
-    color: var(--theme-icon);
-    fill: var(--theme-icon);
+    color: var(--dvlp-primary-text-color);
+    fill: var(--dvlp-primary-text-color);
     transition: fill 0.3s cubic-bezier(0, 0, 0.175, 1), color 0.3s cubic-bezier(0, 0, 0.175, 1);
   }
   .nav__item_name {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: var(--theme-font);
+    color: var(--dvlp-font-color);
     transition: color 0.3s cubic-bezier(0, 0, 0.175, 1);
   }
 }

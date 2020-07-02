@@ -65,7 +65,7 @@ const ModuleSearch = () => {
     <Fragment>
       <li>
         <div className='nav__item module_search px-2 py-1 flex items-center'>
-          <div className='w-4 text-white'>
+          <div className='w-4 text-primary-text-color'>
             <SearchIconSVG />
           </div>
           <input

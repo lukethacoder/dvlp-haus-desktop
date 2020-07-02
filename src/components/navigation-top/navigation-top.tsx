@@ -9,13 +9,13 @@ const NavigationTopMain = (props: any) => {
     <div className='navigation_top flex bg-side-nav-bg'>
       <div className='w-1/2 flex navigation_top__left_side'>
         <div
-          className='px-3 cursor-pointer flex w-8 h-8 text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
+          className='px-3 cursor-pointer flex w-8 h-8 text-primary-text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
           onClick={() => props.history.goBack()}
         >
           <ChevronLeft />
         </div>
         <div
-          className='px-3 cursor-pointer flex w-8 h-8 text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
+          className='px-3 cursor-pointer flex w-8 h-8 text-primary-text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'
           onClick={() => props.history.goForward()}
         >
           <ChevronRight />
@@ -23,7 +23,7 @@ const NavigationTopMain = (props: any) => {
       </div>
       <div className='w-1/2 flex navigation_top__right_side justify-end'>
         <button onClick={() => props.toggleTheme()}>
-          <div className='w-8 h-8 px-2 flex items-center text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'>
+          <div className='w-8 h-8 px-2 flex items-center text-primary-text-color opacity-100 hover:opacity-50 transition-opacity duration-200 ease-in-out'>
             {props.theme === 'dark' ? <Sun /> : <Moon />}
           </div>
         </button>

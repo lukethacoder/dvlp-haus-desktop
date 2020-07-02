@@ -32,7 +32,7 @@ const EmojiSearch: FC = () => {
   return (
     <ModuleWrapper className='p-4'>
       <div className='w-full'>
-        <h1 className='text-color'>searchin emojis h1</h1>
+        <h1 className='text-primary-text-color'>searchin emojis h1</h1>
         <input
           type='text'
           className='w-full'
