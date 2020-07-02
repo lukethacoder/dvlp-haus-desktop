@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react'
 import Fuse from 'fuse.js'
-import emojis from 'emojibase-data/en/data.json'
+import emojis from 'emojibase-data/en/compact.json'
 
 import { IEmojiResults, IEmojiSingle } from './types'
 import { EmojiSearchResults } from './emoji-search-results'
