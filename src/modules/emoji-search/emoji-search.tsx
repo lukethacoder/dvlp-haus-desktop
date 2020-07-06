@@ -66,7 +66,7 @@ const EmojiSearch: FC = () => {
   function searchEmojis(e: React.FormEvent<HTMLInputElement>) {
     setSearchString(e?.currentTarget?.value)
 
-    const emoij_res = fuse.search(searchString).slice(0, 500)
+    const emoij_res = fuse.search(searchString).slice(0, 50)
     setResults(emoij_res)
   }
 
@@ -80,7 +80,7 @@ const EmojiSearch: FC = () => {
     const _favourites = favourites || []
 
     if (_favourites.find((emoji: Emoji) => emoji.hexcode === unicode)) {
-      // already in fav, remove it
+      // already in. fav, remove it
       const remove_this_emoji = _favourites.filter((item) => item.hexcode !== unicode)
 
       if (remove_this_emoji !== undefined) {
