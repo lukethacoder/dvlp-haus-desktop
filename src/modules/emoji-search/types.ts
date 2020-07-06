@@ -2,10 +2,13 @@ import { Emoji } from 'emojibase'
 
 export interface IEmojiResults {
   results: IEmojiSingle[]
+  copyEmoji: (emoji: string) => void
+  toggleFav: (unicode: string) => void
 }
 export interface IEmojiSingle {
   item: Emoji
   refIndex?: number
   score?: number
-  copyEmoji: (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
+  copyEmoji: (emoji: string) => void
+  toggleFav: (unicode: string) => void
 }

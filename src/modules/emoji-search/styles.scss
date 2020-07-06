@@ -1,9 +1,21 @@
 @import '../../styles/mixins';
 
-.emoji__single {
+.emoji__single__fav_wrapper {
+  &:hover {
+    .emoji__single__fav_remove {
+      opacity: 1;
+    }
+  }
+  .emoji__single__fav_remove {
+    opacity: 0;
+    @include cubic_bezier(opacity);
+  }
+}
+
+.emoji__single_fav {
   cursor: pointer;
-  padding-bottom: 100%;
   z-index: 0;
+  padding-bottom: 100%;
   @include cubic_bezier(background-color);
   &:after {
     content: '';
@@ -24,7 +36,40 @@
     }
   }
   .emoji__text {
+    opacity: 1;
+    @include cubic_bezier(opacity);
+    p {
+      min-width: calc(100% + 16px);
+      @include cubic_bezier(opacity);
+    }
+  }
+}
+
+.emoji__single {
+  cursor: pointer;
+  z-index: 0;
+  position: relative;
+  @include cubic_bezier(background-color);
+  &:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--dvlp-tres);
     opacity: 0;
+    top: 0;
+    @include cubic_bezier(opacity);
+  }
+  &:hover {
+    &:after {
+      opacity: 0.25;
+    }
+    .emoji__text {
+      opacity: 1;
+    }
+  }
+  .emoji__text {
+    opacity: 1;
     @include cubic_bezier(opacity);
     p {
       min-width: calc(100% + 16px);
