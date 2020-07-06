@@ -33,7 +33,8 @@
   
   --dvlp-primary-text-color: rgba(var(--dvlp-primary-rgb), 1);
   --dvlp-secondary-text-color: rgba(var(--dvlp-primary-rgb), 0.75);
-  
+  --dvlp-text-highlight: hsl(353, 95%, 20%);
+
   --dvlp-font-color: #ffffff;
   --dvlp-font-accent: hsl(353, 95%, 57%);
 

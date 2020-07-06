@@ -12,9 +12,9 @@ body {
   // These are fallback colours.
   // Main app colours are defined at the Application Component Level
   background-color: $brand-black;
-  color: $brand-primary;
+  color: var(--dvlp-primary-text-color);
   ::selection {
-    background: $brand-primary;
+    background: var(--dvlp-text-highlight);
   }
 }
 
